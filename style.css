@@ -108,62 +108,70 @@ section {
     gap: 8px;
   }
    }
-/* ===== MOBILE CARD FIX ===== */
+/* ===== PRATIK ANIME STREAM - MOBILE CARDS ===== */
 @media (max-width: 600px) {
 
   #series-grid,
   #movie-grid,
   #cartoon-grid,
-  .cards {
+  #latest-movie-grid {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 8px !important;
     width: 100% !important;
-    box-sizing: border-box !important;
+    overflow: visible !important;
   }
 
-  #series-grid .card,
-  #movie-grid .card,
-  #cartoon-grid .card,
-  .cards .card {
+  #series-grid .anime-card,
+  #movie-grid .anime-card,
+  #cartoon-grid .anime-card,
+  #latest-movie-grid .anime-card {
     width: 100% !important;
     min-width: 0 !important;
-    max-width: none !important;
+    max-width: 100% !important;
     margin: 0 !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
   }
 
-  #series-grid .card img,
-  #movie-grid .card img,
-  #cartoon-grid .card img,
-  .cards .card img {
+  #series-grid .anime-poster-wrap,
+  #movie-grid .anime-poster-wrap,
+  #cartoon-grid .anime-poster-wrap,
+  #latest-movie-grid .anime-poster-wrap {
     width: 100% !important;
-    height: 170px !important;
+    height: 165px !important;
+    aspect-ratio: auto !important;
+  }
+
+  #series-grid .anime-poster,
+  #movie-grid .anime-poster,
+  #cartoon-grid .anime-poster,
+  #latest-movie-grid .anime-poster {
+    width: 100% !important;
+    height: 165px !important;
     object-fit: cover !important;
-    display: block !important;
   }
 
-  #series-grid .card h3,
-  #movie-grid .card h3,
-  #cartoon-grid .card h3,
-  .cards .card h3,
-  #series-grid .card .title,
-  #movie-grid .card .title,
-  #cartoon-grid .card .title {
-    font-size: 12px !important;
-    line-height: 15px !important;
-    margin: 4px 0 !important;
+  #series-grid .anime-card-info,
+  #movie-grid .anime-card-info,
+  #cartoon-grid .anime-card-info,
+  #latest-movie-grid .anime-card-info {
+    padding: 6px !important;
   }
 
-  #series-grid .card p,
-  #movie-grid .card p,
-  #cartoon-grid .card p,
-  .cards .card p {
-    font-size: 10px !important;
-    line-height: 13px !important;
-    margin: 2px 0 !important;
+  #series-grid .anime-card-info h3,
+  #movie-grid .anime-card-info h3,
+  #cartoon-grid .anime-card-info h3,
+  #latest-movie-grid .anime-card-info h3 {
+    font-size: 11px !important;
+    line-height: 14px !important;
   }
-   }
+
+  #series-grid .anime-card-info p,
+  #movie-grid .anime-card-info p,
+  #cartoon-grid .anime-card-info p,
+  #latest-movie-grid .anime-card-info p {
+    font-size: 9px !important;
+    line-height: 12px !important;
+  }
+}
 
 
