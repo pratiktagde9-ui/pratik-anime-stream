@@ -108,70 +108,131 @@ section {
     gap: 8px;
   }
    }
-/* ===== PRATIK ANIME STREAM - MOBILE CARDS ===== */
-@media (max-width: 600px) {
+/* ===== ANIME CARD DESIGN ===== */
 
-  #series-grid,
-  #movie-grid,
-  #cartoon-grid,
-  #latest-movie-grid {
+.cards,
+.series-grid,
+#series-grid,
+#movie-grid,
+#cartoon-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 8px !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 16px !important;
     width: 100% !important;
-    overflow: visible !important;
-  }
+}
 
-  #series-grid .anime-card,
-  #movie-grid .anime-card,
-  #cartoon-grid .anime-card,
-  #latest-movie-grid .anime-card {
+.card {
     width: 100% !important;
     min-width: 0 !important;
-    max-width: 100% !important;
     margin: 0 !important;
-  }
-
-  #series-grid .anime-poster-wrap,
-  #movie-grid .anime-poster-wrap,
-  #cartoon-grid .anime-poster-wrap,
-  #latest-movie-grid .anime-poster-wrap {
-    width: 100% !important;
-    height: 165px !important;
-    aspect-ratio: auto !important;
-  }
-
-  #series-grid .anime-poster,
-  #movie-grid .anime-poster,
-  #cartoon-grid .anime-poster,
-  #latest-movie-grid .anime-poster {
-    width: 100% !important;
-    height: 165px !important;
-    object-fit: cover !important;
-  }
-
-  #series-grid .anime-card-info,
-  #movie-grid .anime-card-info,
-  #cartoon-grid .anime-card-info,
-  #latest-movie-grid .anime-card-info {
-    padding: 6px !important;
-  }
-
-  #series-grid .anime-card-info h3,
-  #movie-grid .anime-card-info h3,
-  #cartoon-grid .anime-card-info h3,
-  #latest-movie-grid .anime-card-info h3 {
-    font-size: 11px !important;
-    line-height: 14px !important;
-  }
-
-  #series-grid .anime-card-info p,
-  #movie-grid .anime-card-info p,
-  #cartoon-grid .anime-card-info p,
-  #latest-movie-grid .anime-card-info p {
-    font-size: 9px !important;
-    line-height: 12px !important;
-  }
+    padding: 0 !important;
+    background: #111216 !important;
+    border: 1px solid #292a30 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    transition: transform .2s ease, border-color .2s ease !important;
 }
+
+.card:hover {
+    transform: translateY(-5px) !important;
+    border-color: #ff1744 !important;
+}
+
+.card img {
+    display: block !important;
+    width: 100% !important;
+    height: 225px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    margin: 0 !important;
+}
+
+.card h3,
+.card .title {
+    margin: 12px 10px 6px !important;
+    font-size: 15px !important;
+    line-height: 20px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    height: 40px !important;
+    overflow: hidden !important;
+}
+
+.card p {
+    margin: 5px 10px 12px !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    color: #b8b8b8 !important;
+}
+
+/* ===== HD BADGE ===== */
+
+.card::before {
+    content: "HD";
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    z-index: 5;
+    background: #e9003f;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 7px;
+    border-radius: 5px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 900px) {
+    .cards,
+    .series-grid,
+    #series-grid,
+    #movie-grid,
+    #cartoon-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .card img {
+        height: 190px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards,
+    .series-grid,
+    #series-grid,
+    #movie-grid,
+    #cartoon-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+
+    .card img {
+        height: 170px !important;
+    }
+
+    .card h3,
+    .card .title {
+        font-size: 12px !important;
+        line-height: 16px !important;
+        margin: 8px 6px 4px !important;
+        height: 32px !important;
+    }
+
+    .card p {
+        font-size: 10px !important;
+        margin: 4px 6px 8px !important;
+    }
+
+    .card::before {
+        top: 6px;
+        left: 6px;
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+ }
 
 
