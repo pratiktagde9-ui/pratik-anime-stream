@@ -36,7 +36,7 @@ query ($page: Int, $perPage: Int, $search: String) {
    API FUNCTION
 ========================= */
 
-async function fetchAnime(search = "", perPage = 30) {
+async function fetchAnime(search = "", perPage = 100) {
   try {
     const response = await fetch(API_URL, {
       method: "POST",
@@ -58,7 +58,9 @@ async function fetchAnime(search = "", perPage = 30) {
     });
 
     if (!response.ok) {
-      throw new Error("AniList server error: " + response.status);
+      throw new Error(
+        "AniList server error: " + response.status
+      );
     }
 
     const data = await response.json();
@@ -67,13 +69,52 @@ async function fetchAnime(search = "", perPage = 30) {
       throw new Error(data.errors[0].message);
     }
 
-    return data.data.Page.media || [];
+    return (
+      data.data &&
+      data.data.Page &&
+      data.data.Page.media
+    ) || [];
 
   } catch (error) {
     console.error("API Error:", error);
     throw error;
   }
 }
+  
+    
+      
+
+      
+        
+        
+      
+        
+
+        
+      
+   
+          
+        
+      
+    
+
+    
+      
+    
+
+    
+
+    
+      
+    
+
+    
+
+  
+    
+   
+  
+
 
 /* =========================
    HELPERS
