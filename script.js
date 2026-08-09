@@ -409,6 +409,7 @@ if (latestMovieGrid) {
   
   } catch (error) {
     console.error("Loading error:", error);
+alert("Loading error: " + error.message);
 
     if (seriesGrid) {
       seriesGrid.innerHTML =
