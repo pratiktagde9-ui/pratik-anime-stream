@@ -260,52 +260,106 @@ await Promise.all([
         .filter(Boolean);
 
     const perPage = 15;
-    let currentPage = 0;
+let currentPage = 0;
 
-    const renderSeriesPage = () => {
-        const start = currentPage * perPage;
-        const pageItems = sortedSeries.slice(start, start + perPage);
+const renderSeriesPage = () => {
+  const start = currentPage * perPage;
 
-        seriesGrid.innerHTML = pageItems
-            .map(anime => makeCard(anime, false))
-            .join("");
+  const pageItems = sortedSeries.slice(
+    start,
+    start + perPage
+  );
 
-        let controls = document.querySelector("#series-controls");
+  seriesGrid.innerHTML = pageItems
+    .map(anime => makeCard(anime, false))
+    .join("");
 
-        if (!controls) {
-            controls = document.createElement("div");
-            controls.id = "series-controls";
-            controls.style.cssText =
-                "display:flex;justify-content:flex-end;gap:10px;margin:15px 0 25px;";
+  let controls = document.querySelector("#series-controls");
 
-            seriesGrid.parentNode.appendChild(controls);
-        }
+  if (!controls) {
+    controls = document.createElement("div");
+    controls.id = "series-controls";
 
-        controls.innerHTML = "";
+    controls.style.cssText =
+      "display:flex;justify-content:flex-end;gap:10px;margin:15px 0;";
 
-        if (currentPage < Math.ceil(sortedSeries.length / perPage) - 1) {
-            const nextBtn = document.createElement("button");
+    seriesGrid.parentNode.appendChild(controls);
+  }
 
-            nextBtn.innerHTML = "›";
-            nextBtn.style.cssText =
-                "width:45px;height:45px;border:0;border-radius:50%;background:#f10b3b;color:white;font-size:32px;font-weight:bold;cursor:pointer;";
+  controls.innerHTML = "";
 
-            nextBtn.onclick = () => {
-                currentPage++;
-                renderSeriesPage();
+  const totalPages = Math.ceil(sortedSeries.length / perPage);
 
-                seriesGrid.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            };
+  // RIGHT BUTTON
+  if (currentPage < totalPages - 1) {
+    const nextBtn = document.createElement("button");
 
-            controls.appendChild(nextBtn);
-        }
+    nextBtn.innerHTML = ">";
+
+    nextBtn.style.cssText =
+      "width:45px;height:45px;border:0;border-radius:50%;background:#ff1744;color:white;font-size:32px;cursor:pointer;";
+
+    nextBtn.onclick = () => {
+      currentPage++;
+      renderSeriesPage();
+
+      seriesGrid.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     };
 
-    renderSeriesPage();
-                            }
+    controls.appendChild(nextBtn);
+  }
+};
+
+renderSeriesPage();
+    
+
+    
+        
+        
+
+        
+            
+            
+
+        
+
+        
+            
+            
+            
+                
+
+            
+        
+
+        
+
+        
+            
+
+            
+            
+                
+
+            
+                
+                
+
+                
+                    
+                    
+                
+            
+
+            
+        
+    
+
+    
+                            
       
         
       
