@@ -212,7 +212,7 @@ async function fetchAnime(ids) {
   }
 
   const json = await response.json();
-
+console.log("AniList response:", json);
   if (json.errors) {
     throw new Error(json.errors[0].message);
   }
