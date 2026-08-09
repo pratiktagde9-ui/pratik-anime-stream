@@ -72,3 +72,39 @@ footer{max-width:1040px;margin:auto;border-top:1px solid #242428;padding:25px 27
  .section-head h2{font-size:21px}.section-head a{font-size:12px}.categories{grid-template-columns:repeat(2,1fr);gap:8px}
  .categories button{height:50px;font-size:16px}.categories button span{font-size:12px}
 }
+/* Show all cards and allow full page scrolling */
+html,
+body {
+  min-height: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+main {
+  height: auto;
+  overflow: visible;
+}
+
+section {
+  height: auto;
+  overflow: visible;
+}
+
+.grid {
+  height: auto;
+  max-height: none;
+  overflow: visible;
+}
+
+.card {
+  height: auto;
+}
+
+/* Mobile: 3 cards in each row */
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+   }
