@@ -1,17 +1,79 @@
 const API = "https://graphql.anilist.co";
 
 const series = [
-  [16498, "Shingeki no Kyojin"],
-  [38000, "Kimetsu no Yaiba"],
-  [21459, "Boku no Hero Academia"],
+  [16498, "Attack on Titan"],
+  [38000, "Demon Slayer"],
+  [21459, "My Hero Academia"],
   [21, "One Piece"],
   [20, "Naruto"],
   [1535, "Death Note"],
   [11061, "Hunter x Hunter"],
   [100166, "Tokyo Ghoul"],
   [113415, "Blue Lock"],
-  [101348, "Death Parade"]
+  [101348, "Death Parade"],
+  [101922, "Jujutsu Kaisen"],
+  [110277, "Chainsaw Man"],
+  [14227, "The Promised Neverland"],
+  [101759, "Haikyuu!!"],
+  [116006, "Spy x Family"],
+  [142938, "Frieren"],
+  [151807, "Solo Leveling"],
+  [154587, "Kaiju No. 8"],
+  [146066, "The Apothecary Diaries"],
+  [153288, "Dandadan"],
+  [9253, "Steins;Gate"],
+  [113538, "Violet Evergarden"],
+  [21519, "Your Name"],
+  [199, "Spirited Away"],
+  [523, "My Neighbor Totoro"],
+  [101280, "Dr. Stone"],
+  [107693, "Mushoku Tensei"],
+  [131573, "Oshi no Ko"],
+  [132405, "Mashle"],
+  [130003, "Wind Breaker"],
+  [137822, "Delicious in Dungeon"],
+  [129874, "Zom 100"],
+  [128547, "Hell's Paradise"],
+  [100388, "Vinland Saga"],
+  [106625, "Mob Psycho 100"],
+  [21507, "One Punch Man"],
+  [104578, "Komi Can't Communicate"],
+  [20923, "Kuroko's Basketball"],
+  [101337, "Fire Force"],
+  [119243, "Tokyo Revengers"],
+  [127500, "The Rising of the Shield Hero"],
+  [113566, "That Time I Got Reincarnated as a Slime"],
+  [108511, "Overlord"],
+  [21234, "Re:ZERO"],
+  [20665, "Sword Art Online"],
+  [105333, "Classroom of the Elite"],
+  [108725, "The Misfit of Demon King Academy"],
+  [100183, "Noragami"],
+  [20583, "Haikyuu!! Second Season"],
+  [20605, "Haikyuu!! Third Season"],
+  [20958, "Haikyuu!! Fourth Season"],
+  [101167, "Black Clover"],
+  [101921, "Violet Evergarden: The Movie"],
+  [105333, "Classroom of the Elite"],
+  [101315, "Fire Force Season 2"],
+  [108465, "The God of High School"],
+  [113547, "Akudama Drive"],
+  [114129, "86 Eighty-Six"],
+  [131586, "Ranking of Kings"],
+  [127090, "Tokyo Revengers"],
+  [139518, "The Eminence in Shadow"]
 ];
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
 const movies = [
   [101249, "Demon Slayer: Mugen Train"],
