@@ -108,3 +108,39 @@ section {
     gap: 8px;
   }
    }
+/* MOBILE CARD SIZE FIX */
+@media (max-width: 600px) {
+
+  .cards,
+  .series-grid,
+  #series-grid,
+  #movie-grid,
+  #cartoon-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .card {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .card img {
+    width: 100% !important;
+    height: 170px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .card h3,
+  .card .title {
+    font-size: 12px !important;
+    line-height: 15px !important;
+  }
+
+  .card p {
+    font-size: 10px !important;
+  }
+}
