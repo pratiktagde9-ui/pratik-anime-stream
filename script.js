@@ -988,3 +988,50 @@ document.addEventListener(
 
   }
 );
+/* =========================================
+   HORIZONTAL CARD ROW
+   15 CARDS - RIGHT SCROLL
+========================================= */
+
+.grid {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  gap: 12px !important;
+  width: 100% !important;
+  padding: 5px 2px 15px !important;
+  scroll-behavior: smooth !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Har card ki fixed width */
+.grid .card {
+  flex: 0 0 220px !important;
+  width: 220px !important;
+  min-width: 220px !important;
+  max-width: 220px !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid .card {
+    flex: 0 0 220px !important;
+    width: 220px !important;
+    min-width: 220px !important;
+  }
+}
+
+/* Scrollbar */
+.grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: #ff0048;
+  border-radius: 10px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background: #111;
+}
