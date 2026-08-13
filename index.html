@@ -2,111 +2,93 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#030305">
 <title>Pratik Anime Stream</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="topbar">
-  <div class="brand">
-    <div class="brand-logo">P</div>
-    <div class="brand-name">PRATIK ANIME<br><span>STREAM</span></div>
-  </div>
-  <nav>
-    <a class="active" href="#home">Home</a>
-    <a href="#series">Series</a>
-    <a href="#movies">Movies</a>
-    <a href="#categories">Categories⌄</a>
-    <a href="#schedule">Schedule</a>
-  </nav>
-  <div class="header-right">
-    <div class="search"><input id="search" placeholder="Search anime..."><b>⌕</b></div>
-    <button class="login">Login</button>
+  <a class="brand" href="#">
+    <span class="brand-main">PRATIK</span>
+    <span class="brand-sub">ANIME STREAM</span>
+    <small>アニメストリーム</small>
+  </a>
+  <div class="top-actions">
+    <button class="icon-btn" id="search-focus">⌕</button>
+    <button class="icon-btn">♡</button>
+    <button class="icon-btn">⋮</button>
   </div>
 </header>
 
-<main id="home">
+<main>
 <section class="hero">
-  <div class="hero-copy">
-    <h3>Welcome to</h3>
-    <h1>PRATIK ANIME STREAM</h1>
-    <p>Watch the best anime series and movies<br>in high quality.</p>
-    <a class="watch" href="#series">▶ &nbsp;Start Watching</a>
-  </div>
-  <div class="hero-art">
-    <div class="redmoon"></div>
-    <div class="hero-person">アニメ</div>
-    <div class="hero-title">PRATIK</div>
-    <div class="hero-sub">ANIME STREAM</div>
-  </div>
-  <div class="arrow left">‹</div><div class="arrow right">›</div>
-  <div class="slider-dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
-</section>
+  <div class="hero-content">
+    <p class="eyebrow">WELCOME TO</p>
+    <h1>Pratik Anime Stream</h1>
+    <p class="hero-text">Anime, cartoons and movies — all in one stylish place.</p>
 
-<!-- WATCH HISTORY -->
-<section id="watch-history-section" class="watch-history-section">
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="Search anime, movies, cartoons...">
+      <button id="searchBtn">⌕</button>
+    </div>
 
-  <div class="section-head">
-    <h2>Watch History</h2>
-
-    <button id="clear-history" class="clear-history-btn">
-      Clear
-    </button>
-  </div>
-
-  <div id="watch-history-grid">
-    <p class="history-empty">No watch history yet.</p>
-  </div>
-
-</section>
-
-<section id="series">
-
-
-  <div class="section-head"><h2>Latest Series</h2><a>View All ›</a></div>
-  <div id="series-grid" class="grid"></div>
-</section>
-<section id="latest-movies">
-  <div class="section-head">
-    <h2>Latest Movies</h2>
-    <a href="#">View All ›</a>
-  </div>
-
-  <div id="latest-movie-grid" class="grid"></div>
-      </section>
-  <section id="cartoons">
-  <div class="section-head">
-    <h2>Cartoons</h2>
-    <a href="#">View All ›</a>
-  </div>
-
-  <div id="cartoon-grid" class="grid"></div>
-      </section>
-<section id="movies">
-  <div class="section-head"><h2>Popular Movies</h2><a>View All ›</a></div>
-  <div id="movie-grid" class="grid"></div>
-</section>
-
-<section id="categories">
-  <div class="section-head"><h2>Categories</h2></div>
-  <div class="categories">
-    <button>✦ <span>Action</span><b>›</b></button>
-    <button>▲ <span>Adventure</span><b>›</b></button>
-    <button>● <span>Comedy</span><b>›</b></button>
-    <button>◆ <span>Drama</span><b>›</b></button>
-    <button>✣ <span>Fantasy</span><b>›</b></button>
-    <button>♥ <span>Romance</span><b>›</b></button>
+    <div class="featured-cards">
+      <a class="featured-card transformers" href="#cartoon-grid">
+        <div class="featured-art">⚡</div><span>TRANSFORMERS</span><b>PRATIK ANIME STREAM</b>
+      </a>
+      <a class="featured-card shinchan" href="#cartoon-grid">
+        <div class="featured-art">🧒</div><span>SHINCHAN</span><b>PRATIK ANIME STREAM</b>
+      </a>
+      <a class="featured-card dragonball" href="#cartoon-grid">
+        <div class="featured-art">🐉</div><span>DRAGON BALL</span><b>PRATIK ANIME STREAM</b>
+      </a>
+    </div>
   </div>
 </section>
 
-<section id="schedule" class="schedule">
-  <div class="section-head"><h2>Schedule</h2></div>
-  <p>New anime releases and episodes will appear here.</p>
+<section class="content-section">
+  <div class="section-heading"><h2>Watch History</h2><button class="clear-btn" id="clearHistory">Clear</button></div>
+  <div class="poster-row" id="history-grid"><div class="empty-state">Your watch history will appear here.</div></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Latest Series</h2><a href="#series-grid">View All ›</a></div>
+  <div class="poster-row" id="series-grid"><div class="loading">Loading...</div></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Latest Movies</h2><a href="#latest-movie-grid">View All ›</a></div>
+  <div class="poster-row" id="latest-movie-grid"><div class="loading">Loading...</div></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Cartoons</h2><a href="#cartoon-grid">View All ›</a></div>
+  <div class="poster-row" id="cartoon-grid"><div class="loading">Loading...</div></div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading"><h2>Popular Movies</h2><a href="#movie-grid">View All ›</a></div>
+  <div class="poster-row" id="movie-grid"><div class="loading">Loading...</div></div>
 </section>
 </main>
 
-<footer><b>PRATIK ANIME STREAM</b><span>© 2026</span></footer>
+<nav class="bottom-nav">
+  <a href="#latest-movie-grid"><span>▣</span><small>MOVIES</small></a>
+  <a href="#series-grid"><span>◆</span><small>SERIES</small></a>
+  <a class="active" href="#"><span>⬟</span><small>HOME</small></a>
+  <a href="#series-grid"><span>♢</span><small>ANIME</small></a>
+  <a href="#cartoon-grid"><span>♧</span><small>CARTOON</small></a>
+</nav>
+
+<script>
+const input=document.getElementById("searchInput");
+document.getElementById("searchBtn").onclick=()=>{if(input.value.trim())window.dispatchEvent(new CustomEvent("pratikSearch",{detail:input.value.trim()}));};
+input.onkeydown=e=>{if(e.key==="Enter")document.getElementById("searchBtn").click();};
+document.getElementById("search-focus").onclick=()=>{input.focus();document.querySelector(".hero").scrollIntoView({behavior:"smooth"});};
+document.getElementById("clearHistory").onclick=()=>{localStorage.removeItem("pratikWatchHistory");document.getElementById("history-grid").innerHTML='<div class="empty-state">Watch history cleared.</div>';};
+</script>
 <script src="script.js"></script>
 </body>
 </html>
