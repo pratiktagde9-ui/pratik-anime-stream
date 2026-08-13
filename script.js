@@ -509,63 +509,132 @@ const CARTOONS = [
 ];
 
 
-function loadCartoons(grid) {
+async function loadCartoons(grid) {
+    if (!grid) return;
 
-  if (!grid) return;
+    grid.innerHTML = "<p>Cartoons loading...</p>";
 
-  const row =
-    document.createElement("div");
+    const row = document.createElement("div");
+    row.className = "pratik-horizontal-row";
 
-  row.className =
-    "pratik-horizontal-row";
+    const cards = await Promise.all(
+        CARTOONS.map(async function(title) {
+            let image = "https://placehold.co/300x430/111111/ffffff?text=Cartoon";
 
+            try {
+                const response = await fetch(
+                    "https://api.tvmaze.com/search/shows?q=" +
+                    encodeURIComponent(title)
+                );
 
-  row.innerHTML =
-    CARTOONS.map(function(title) {
+                const data = await response.json();
 
-      return `
+                if (data.length && data[0].show.image) {
+                    image =
+                        data[0].show.image.original ||
+                        data[0].show.image.medium ||
+                        image;
+                }
+            } catch (error) {
+                console.error("Cartoon image error:", error);
+            }
 
-        <article class="card cartoon-card">
+            return `
+                <article class="card cartoon-card">
+                    <div class="card-image-wrap">
 
-          <div class="card-image-wrap">
+                        <span class="card-badge">
+                            Cartoon
+                        </span>
 
-            <span class="card-badge">
-              Cartoon
-            </span>
+                        <img
+                            class="card-img"
+                            src="${image}"
+                            alt="${escapeHTML(title)}"
+                            loading="lazy"
+                        >
 
-            <img
-              class="card-img"
-              src="https://placehold.co/300x430/111111/ffffff?text=${encodeURIComponent(title)}"
-              alt="${escapeHTML(title)}"
-              loading="lazy"
-            >
+                    </div>
 
-          </div>
+                    <div class="card-body">
 
-          <div class="card-body">
+                        <h3 class="card-title">
+                            ${escapeHTML(title)}
+                        </h3>
 
-            <h3 class="card-title">
-              ${escapeHTML(title)}
-            </h3>
+                        <p class="card-meta">
+                            Cartoon
+                        </p>
 
-            <p class="card-meta">
-              Cartoon
-            </p>
+                    </div>
+                </article>
+            `;
+        })
+    );
 
-          </div>
+    row.innerHTML = cards.join("");
 
-        </article>
-
-      `;
-
-    }).join("");
-
-
-  grid.innerHTML = "";
-
-  grid.appendChild(row);
-
+    grid.innerHTML = "";
+    grid.appendChild(row);
 }
+
+  
+
+  
+    
+
+  
+    
+
+
+  
+    
+
+      
+
+        
+
+          
+
+          
+
+            
+              
+         
+
+            
+              
+              
+              
+              
+            
+
+          
+
+          
+
+            
+              
+            
+
+            
+              
+            
+
+          
+
+        
+
+      
+
+    
+
+
+  
+
+  
+
+
 
 
 /* =====================================================
