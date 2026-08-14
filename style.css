@@ -1,0 +1,250 @@
+/* ===== TOP FEATURE CARDS ===== */
+
+.featured {
+  position: relative;
+  z-index: 5;
+
+  margin-top: -35px;
+  padding: 0 7% 45px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.feature-card {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+
+  border-radius: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.75),
+    inset 0 0 25px rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow:
+    0 18px 45px rgba(255, 20, 60, 0.35),
+    0 0 25px rgba(255, 20, 60, 0.25);
+}
+
+
+/* CARD BACKGROUNDS */
+
+.transformers {
+  background: linear-gradient(
+    160deg,
+    #ff1744 0%,
+    #e90032 55%,
+    #a90025 100%
+  );
+}
+
+.shinchan {
+  background: linear-gradient(
+    160deg,
+    #16c7eb 0%,
+    #08a9ce 55%,
+    #007d9e 100%
+  );
+}
+
+.dragonball {
+  background: linear-gradient(
+    160deg,
+    #ffb21c 0%,
+    #f4930b 55%,
+    #d76500 100%
+  );
+}
+
+
+/* CHARACTER IMAGE */
+
+.feature-card img {
+  width: 100%;
+  height: 265px;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  display: block;
+
+  padding: 5px 12px 0;
+
+  filter: drop-shadow(
+    0 10px 10px rgba(0, 0, 0, 0.45)
+  );
+
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover img {
+  transform: scale(1.06);
+}
+
+
+/* BLACK TITLE */
+
+.feature-title {
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+  bottom: 48px;
+
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #020202;
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 5px 12px rgba(0,0,0,.5);
+}
+
+
+/* PRATIK BRAND STRIP */
+
+.feature-brand {
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+  bottom: 9px;
+
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ff1744;
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.95),
+      rgba(35,0,5,.95),
+      rgba(0,0,0,.95)
+    );
+
+  color: #fff;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 700px) {
+
+  .featured {
+    margin-top: -20px;
+
+    padding: 0 28px 35px;
+
+    gap: 18px;
+  }
+
+  .feature-card {
+    height: 330px;
+    border-radius: 20px;
+  }
+
+  .feature-card img {
+    height: 245px;
+    padding: 4px 5px 0;
+  }
+
+  .feature-title {
+    left: 9px;
+    right: 9px;
+    bottom: 43px;
+
+    height: 42px;
+
+    font-size: 11px;
+  }
+
+  .feature-brand {
+    left: 9px;
+    right: 9px;
+    bottom: 8px;
+
+    height: 28px;
+
+    font-size: 6px;
+  }
+}
+
+
+/* ===== SMALL MOBILE ===== */
+
+@media (max-width: 390px) {
+
+  .featured {
+    padding-left: 18px;
+    padding-right: 18px;
+
+    gap: 10px;
+  }
+
+  .feature-card {
+    height: 280px;
+    border-radius: 17px;
+  }
+
+  .feature-card img {
+    height: 205px;
+  }
+
+  .feature-title {
+    left: 6px;
+    right: 6px;
+    bottom: 38px;
+
+    height: 35px;
+
+    font-size: 9px;
+  }
+
+  .feature-brand {
+    left: 6px;
+    right: 6px;
+
+    bottom: 6px;
+
+    height: 25px;
+
+    font-size: 5px;
+  }
+  }
