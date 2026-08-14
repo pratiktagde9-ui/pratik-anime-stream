@@ -1,0 +1,602 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#030305;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
+  padding-bottom:75px;
+}
+
+/* ================= HEADER ================= */
+
+.topbar{
+  height:72px;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 18px;
+  background:rgba(3,3,6,.92);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  position:sticky;
+  top:0;
+  z-index:999;
+  backdrop-filter:blur(14px);
+}
+
+.logo{
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  line-height:.85;
+}
+
+.logo-main{
+  color:#fff;
+  font-size:27px;
+  font-weight:1000;
+  font-style:italic;
+  letter-spacing:-2px;
+}
+
+.logo-sub{
+  color:#ff1238;
+  font-size:13px;
+  font-weight:900;
+  font-style:italic;
+}
+
+.logo-jp{
+  color:#aaa;
+  font-size:7px;
+  margin-top:3px;
+}
+
+.top-icons{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.top-icons button{
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  position:relative;
+  min-height:690px;
+  padding:55px 28px 35px;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.08) 0%,
+      rgba(0,0,0,.15) 40%,
+      #030305 100%
+    ),
+    url("assets/hero.jpg");
+
+  background-size:cover;
+  background-position:center top;
+  background-repeat:no-repeat;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 35%,
+      rgba(3,3,5,.35) 65%,
+      #030305 100%
+    );
+  pointer-events:none;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  margin:auto;
+}
+
+.welcome{
+  color:#ff183d;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:5px;
+  margin-bottom:10px;
+}
+
+.hero h1{
+  font-size:48px;
+  font-weight:900;
+  margin-bottom:10px;
+  text-shadow:0 3px 20px #000;
+}
+
+.hero p{
+  color:#ddd;
+  font-size:14px;
+  margin-bottom:22px;
+}
+
+/* ================= SEARCH ================= */
+
+.search{
+  height:58px;
+  width:100%;
+  display:flex;
+  align-items:center;
+  border:2px solid rgba(255,255,255,.85);
+  border-radius:40px;
+  background:rgba(0,0,0,.35);
+  overflow:hidden;
+  margin-bottom:30px;
+  backdrop-filter:blur(8px);
+}
+
+.search input{
+  flex:1;
+  height:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:white;
+  padding:0 22px;
+  font-size:15px;
+}
+
+.search input::placeholder{
+  color:#ddd;
+}
+
+.search button{
+  width:58px;
+  height:58px;
+  border:0;
+  border-radius:50%;
+  background:#ff123c;
+  color:#fff;
+  font-size:21px;
+  cursor:pointer;
+  box-shadow:0 0 20px rgba(255,20,60,.7);
+}
+
+/* ================= FEATURED ================= */
+
+.featured{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.feature-card{
+  height:325px;
+  border-radius:24px;
+  position:relative;
+  overflow:hidden;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:12px;
+  border:2px solid rgba(255,255,255,.12);
+  box-shadow:0 15px 35px rgba(0,0,0,.5);
+  transition:.3s;
+}
+
+.feature-card:hover{
+  transform:translateY(-7px);
+}
+
+.feature-card.transformers{
+  background:linear-gradient(180deg,#ed1234,#850014);
+}
+
+.feature-card.shinchan{
+  background:linear-gradient(180deg,#09c1e6,#00738e);
+}
+
+.feature-card.dragon{
+  background:linear-gradient(180deg,#ff9e19,#9b5100);
+}
+
+.feature-art{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:110px;
+}
+
+.feature-title{
+  background:#020202;
+  border-radius:10px;
+  color:#fff;
+  text-align:center;
+  padding:10px 5px;
+  font-size:17px;
+  font-weight:900;
+}
+
+.mini-brand{
+  color:#ff173b;
+  text-align:center;
+  font-size:7px;
+  padding-top:6px;
+  font-weight:bold;
+}
+
+/* ================= CONTENT ================= */
+
+.content-section{
+  max-width:1400px;
+  margin:auto;
+  padding:35px 20px 5px;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #202024;
+  padding-bottom:12px;
+  margin-bottom:18px;
+}
+
+.section-head h2{
+  font-size:21px;
+  padding-left:12px;
+  position:relative;
+}
+
+.section-head h2:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:1px;
+  width:4px;
+  height:23px;
+  border-radius:4px;
+  background:#ff123c;
+}
+
+.section-head a{
+  color:#ff173d;
+  font-size:12px;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+/* ================= POSTERS ================= */
+
+.poster-row{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:185px;
+  gap:13px;
+  overflow-x:auto;
+  padding-bottom:12px;
+}
+
+.poster-row::-webkit-scrollbar{
+  height:4px;
+}
+
+.poster-row::-webkit-scrollbar-thumb{
+  background:#444;
+  border-radius:10px;
+}
+
+.poster{
+  min-width:185px;
+  background:#0e0e12;
+  border:1px solid #25252a;
+  border-radius:8px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.poster:hover{
+  transform:translateY(-5px);
+  border-color:#ff173d;
+}
+
+.poster-img{
+  height:270px;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg,#242424,#101010);
+}
+
+.poster-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.poster-img span{
+  position:absolute;
+  top:7px;
+  left:7px;
+  background:#080808;
+  color:white;
+  padding:4px 6px;
+  border-radius:4px;
+  font-size:8px;
+  font-weight:bold;
+}
+
+.poster h3{
+  font-size:12px;
+  padding:9px 7px 3px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.poster p{
+  color:#999;
+  font-size:10px;
+  padding:0 7px 9px;
+}
+
+/* ================= EMPTY ================= */
+
+.empty{
+  color:#777;
+  min-height:100px;
+  padding:25px 7px;
+}
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  height:70px;
+  background:rgba(5,5,7,.96);
+  border-top:1px solid #222;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  z-index:2000;
+  backdrop-filter:blur(15px);
+}
+
+.bottom-nav a{
+  text-decoration:none;
+  color:#888;
+  text-align:center;
+  font-size:10px;
+  min-width:60px;
+}
+
+.bottom-nav a span{
+  display:block;
+  font-size:22px;
+  margin-bottom:3px;
+}
+
+.bottom-nav a.active{
+  color:#ff123d;
+}
+
+.bottom-nav a.active span{
+  filter:drop-shadow(0 0 8px #ff123d);
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:800px){
+
+  .hero{
+    min-height:570px;
+    padding:45px 18px 25px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .featured{
+    gap:12px;
+  }
+
+  .feature-card{
+    height:240px;
+    border-radius:17px;
+  }
+
+  .feature-art{
+    font-size:75px;
+  }
+
+  .feature-title{
+    font-size:12px;
+    padding:8px 3px;
+  }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+  body{
+    padding-bottom:65px;
+  }
+
+  .topbar{
+    height:60px;
+    padding:8px 15px;
+  }
+
+  .logo-main{
+    font-size:23px;
+  }
+
+  .logo-sub{
+    font-size:10px;
+  }
+
+  .top-icons{
+    gap:8px;
+  }
+
+  .top-icons button{
+    font-size:18px;
+  }
+
+  .hero{
+    min-height:530px;
+    padding:45px 14px 20px;
+
+    background-size:auto 520px;
+    background-position:center top;
+  }
+
+  .welcome{
+    font-size:9px;
+    letter-spacing:4px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero p{
+    font-size:11px;
+  }
+
+  .search{
+    height:48px;
+    margin-bottom:20px;
+  }
+
+  .search input{
+    font-size:12px;
+    padding:0 15px;
+  }
+
+  .search button{
+    width:48px;
+    height:48px;
+  }
+
+  .featured{
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+  }
+
+  .feature-card{
+    height:175px;
+    padding:7px;
+    border-radius:14px;
+  }
+
+  .feature-art{
+    font-size:53px;
+  }
+
+  .feature-title{
+    font-size:9px;
+    padding:7px 2px;
+    border-radius:6px;
+  }
+
+  .mini-brand{
+    font-size:4px;
+  }
+
+  .content-section{
+    padding:27px 13px 5px;
+  }
+
+  .section-head h2{
+    font-size:17px;
+  }
+
+  .section-head h2:before{
+    height:19px;
+  }
+
+  .poster-row{
+    grid-auto-columns:140px;
+    gap:8px;
+  }
+
+  .poster{
+    min-width:140px;
+  }
+
+  .poster-img{
+    height:205px;
+  }
+
+  .poster h3{
+    font-size:10px;
+  }
+
+  .poster p{
+    font-size:8px;
+  }
+
+  .bottom-nav{
+    height:62px;
+  }
+
+  .bottom-nav a{
+    font-size:9px;
+  }
+
+  .bottom-nav a span{
+    font-size:20px;
+  }
+}
+
+/* ================= SMALL PHONE ================= */
+
+@media(max-width:380px){
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .feature-card{
+    height:160px;
+  }
+
+  .feature-art{
+    font-size:45px;
+  }
+
+  .feature-title{
+    font-size:8px;
+  }
+
+    }
