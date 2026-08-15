@@ -1,0 +1,582 @@
+/* =========================================
+   PRATIK ANIME STREAM - COMPLETE STYLE
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050505;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 80px;
+}
+
+/* =========================================
+   TOP HEADER
+   ========================================= */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 18px;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+  backdrop-filter: blur(12px);
+}
+
+.topbar .logo {
+  display: block;
+}
+
+.topbar .logo img {
+  width: 150px;
+  height: 55px;
+  object-fit: contain;
+  display: block;
+}
+
+.topbar .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar button {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  position: relative;
+  min-height: 720px;
+  margin-top: 72px;
+  background-image: url("assets/hero-reference.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.30) 45%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 300px 25px 40px;
+  max-width: 900px;
+}
+
+.hero-content .welcome {
+  color: #ff1744;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  line-height: 1.05;
+  margin-bottom: 15px;
+  text-shadow: 0 3px 15px #000;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #eee;
+  margin-bottom: 25px;
+}
+
+/* =========================================
+   SEARCH
+   ========================================= */
+
+#searchForm {
+  display: flex;
+  width: 100%;
+  max-width: 650px;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+#searchInput {
+  flex: 1;
+  min-width: 0;
+  height: 62px;
+  border: 0;
+  outline: none;
+  padding: 0 25px;
+  background: transparent;
+  color: #fff;
+  font-size: 17px;
+}
+
+#searchInput::placeholder {
+  color: #ddd;
+}
+
+#searchForm button {
+  width: 95px;
+  border: 0;
+  background: #ff1744;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* =========================================
+   QUICK CARDS
+   ========================================= */
+
+.quick {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 0 25px 35px;
+  margin-top: -5px;
+}
+
+.quick a {
+  min-width: 0;
+  min-height: 330px;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  background: #111;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.65);
+}
+
+.quick a:nth-child(1) {
+  background: linear-gradient(180deg, #ff1645, #780019);
+}
+
+.quick a:nth-child(2) {
+  background: linear-gradient(180deg, #12c9ed, #006477);
+}
+
+.quick a:nth-child(3) {
+  background: linear-gradient(180deg, #ffae16, #a44f00);
+}
+
+.quick img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.quick b {
+  position: absolute;
+  bottom: 55px;
+  left: 12px;
+  right: 12px;
+  padding: 12px 8px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  font-size: 14px;
+}
+
+.quick small {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+section.section {
+  padding: 30px 25px;
+  background: #050505;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.heading h2 {
+  font-size: 25px;
+}
+
+.heading a {
+  color: #ff1744;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* =========================================
+   GENERAL GRID
+   ========================================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* =========================================
+   POSTER CARDS
+   ========================================= */
+
+.poster {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: transform 0.25s ease;
+}
+
+.poster:hover {
+  transform: translateY(-5px);
+}
+
+.poster img {
+  width: 100%;
+  height: 240px;
+  display: block;
+  object-fit: cover;
+}
+
+.poster span {
+  display: block;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* =========================================
+   WATCH HISTORY
+   ========================================= */
+
+.watch-history {
+  padding: 30px 25px;
+}
+
+.watch-history h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+#history {
+  min-height: 50px;
+}
+
+#empty {
+  color: #888;
+  font-size: 14px;
+}
+
+/* =========================================
+   BOTTOM NAVIGATION
+   ========================================= */
+
+.bottom-nav,
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: rgba(0, 0, 0, 0.96);
+  border-top: 1px solid #222;
+  z-index: 2000;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  backdrop-filter: blur(12px);
+}
+
+.bottom-nav a,
+.mobile-nav a {
+  color: #777;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 11px;
+}
+
+.bottom-nav a small,
+.mobile-nav a small {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+.bottom-nav a.active,
+.mobile-nav a.active {
+  color: #ff1744;
+}
+
+.bottom-nav a b,
+.mobile-nav a b {
+  font-size: 20px;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding-bottom: 72px;
+  }
+
+  .topbar {
+    height: 72px;
+    padding: 7px 12px;
+  }
+
+  .topbar .logo img {
+    width: 145px;
+    height: 55px;
+  }
+
+  .topbar .actions {
+    gap: 4px;
+  }
+
+  .topbar button {
+    font-size: 25px;
+  }
+
+  .hero {
+    min-height: 720px;
+    margin-top: 72px;
+    background-position: center top;
+  }
+
+  .hero-content {
+    padding: 300px 20px 30px;
+  }
+
+  .hero-content .welcome {
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+    line-height: 1.1;
+    margin: 10px 0;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  #searchForm {
+    width: 100%;
+  }
+
+  #searchInput {
+    height: 58px;
+    padding: 0 18px;
+    font-size: 15px;
+  }
+
+  #searchForm button {
+    width: 75px;
+  }
+
+  .quick {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    padding: 0 18px 30px;
+  }
+
+  .quick a {
+    height: 330px;
+    min-height: 330px;
+    border-radius: 20px;
+  }
+
+  .quick img {
+    height: 210px;
+  }
+
+  .quick b {
+    font-size: 12px;
+    bottom: 55px;
+  }
+
+  .quick small {
+    font-size: 8px;
+  }
+
+  section.section {
+    padding: 25px 18px;
+  }
+
+  .watch-history {
+    padding: 25px 18px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .poster img {
+    height: 210px;
+  }
+
+  .poster span {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .heading h2 {
+    font-size: 21px;
+  }
+
+  .bottom-nav,
+  .mobile-nav {
+    height: 72px;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 420px) {
+
+  .hero {
+    min-height: 680px;
+  }
+
+  .hero-content {
+    padding: 285px 18px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .quick {
+    gap: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .quick a {
+    height: 300px;
+    min-height: 300px;
+    border-radius: 18px;
+  }
+
+  .quick img {
+    height: 185px;
+  }
+
+  .quick b {
+    font-size: 10px;
+    left: 7px;
+    right: 7px;
+    bottom: 52px;
+  }
+
+  .quick small {
+    font-size: 7px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .poster img {
+    height: 185px;
+  }
+
+  .poster span {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 360px) {
+
+  .topbar .logo img {
+    width: 125px;
+  }
+
+  .hero-content h1 {
+    font-size: 29px;
+  }
+
+  .quick a {
+    height: 285px;
+    min-height: 285px;
+  }
+
+  .quick img {
+    height: 170px;
+  }
+
+  .quick b {
+    font-size: 9px;
+  }
+  }
