@@ -1089,3 +1089,182 @@ img {
 /* =========================================================
    END
    ========================================================= */
+/* =========================================
+   PRATIK ANIME STREAM - FINAL MOBILE LAYOUT
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    min-height: 720px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-content {
+    padding: 300px 18px 25px !important;
+  }
+
+  /* SEARCH */
+  .search-form,
+  .search-box,
+  .search-container,
+  #searchForm {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 15px 0 !important;
+    position: relative !important;
+    z-index: 50 !important;
+  }
+
+  .search-form input,
+  .search-box input,
+  #searchInput {
+    width: calc(100% - 55px) !important;
+    height: 46px !important;
+    box-sizing: border-box !important;
+  }
+
+  .search-form button,
+  .search-box button,
+  #searchForm button {
+    width: 50px !important;
+    height: 46px !important;
+  }
+
+  /* QUICK CARDS */
+  .quick {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+    margin: 15px 0 30px !important;
+    box-sizing: border-box !important;
+  }
+
+  .quick a {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .quick img {
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: cover !important;
+  }
+
+  /* ALL NORMAL GRIDS */
+  .section .grid,
+  .latest-series .grid,
+  .latest-movies .grid,
+  .newest-drops .grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    padding: 0 18px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* NORMAL POSTER CARDS */
+  .section .grid article,
+  .latest-series .grid article,
+  .latest-movies .grid article,
+  .newest-drops .grid article,
+  .poster {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 230px !important;
+    min-height: 0 !important;
+    max-height: 230px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .section .grid article img,
+  .latest-series .grid article img,
+  .latest-movies .grid article img,
+  .newest-drops .grid article img,
+  .poster img {
+    width: 100% !important;
+    height: 170px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .section .grid article span,
+  .latest-series .grid article span,
+  .latest-movies .grid article span,
+  .newest-drops .grid article span {
+    display: block !important;
+    padding: 8px !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* SECTION HEADINGS */
+  .section {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 25px 0 !important;
+  }
+
+  .section .heading {
+    padding: 0 18px !important;
+  }
+
+  /* REMOVE HUGE DESKTOP SIZES */
+  .featured-card,
+  .category-card,
+  .card {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+
+/* SMALL PHONE */
+@media (max-width: 420px) {
+
+  .hero-content {
+    padding: 285px 16px 20px !important;
+  }
+
+  .quick {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 7px !important;
+    padding: 0 8px !important;
+  }
+
+  .quick img {
+    height: 125px !important;
+  }
+
+  .section .grid,
+  .latest-series .grid,
+  .latest-movies .grid,
+  .newest-drops .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    padding: 0 12px !important;
+  }
+
+  .section .grid article,
+  .latest-series .grid article,
+  .latest-movies .grid article,
+  .newest-drops .grid article,
+  .poster {
+    height: 210px !important;
+    max-height: 210px !important;
+  }
+
+  .section .grid article img,
+  .latest-series .grid article img,
+  .latest-movies .grid article img,
+  .newest-drops .grid article img,
+  .poster img {
+    height: 150px !important;
+  }
+                                            }
