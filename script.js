@@ -15,7 +15,7 @@ function cards(type,names){
 function render(){
  series.innerHTML=cards("series",lists.series);
  movies.innerHTML=cards("movies",lists.movies);
- cartoons.innerHTML=cards("cartoon",lists.cartoons);
+ cartoons.innerHTML=cards("cartoons",lists.cartoons);
  popular.innerHTML=cards("movies",lists.movies.slice(4).concat(lists.movies.slice(0,4)));
 }
 render();
