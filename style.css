@@ -1,0 +1,143 @@
+/* =========================================
+   PRATIK ANIME STREAM - MOBILE CARD FIX
+   Paste this at the END of style.css
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    min-height: 720px !important;
+    background-position: center top !important;
+  }
+
+  .hero-content {
+    padding: 300px 20px 30px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 38px !important;
+    line-height: 1.1 !important;
+    margin: 10px 0 !important;
+  }
+
+  .hero-content p {
+    font-size: 15px !important;
+    margin-bottom: 25px !important;
+  }
+
+  /* SEARCH */
+  .search-box,
+  .search-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* TOP FEATURE CARDS */
+  .featured,
+  .featured-cards,
+  .category-cards,
+  .cards {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .featured-card,
+  .category-card,
+  .card {
+    min-width: 0 !important;
+    height: 330px !important;
+    max-height: 330px !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+  }
+
+  /* CARD IMAGE */
+  .featured-card img,
+  .category-card img,
+  .card img {
+    width: 100% !important;
+    height: 210px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
+  /* CARD TITLE */
+  .featured-card h3,
+  .category-card h3,
+  .card h3 {
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin: 5px 4px !important;
+  }
+
+  /* PRATIK ANIME STREAM LABEL */
+  .featured-card small,
+  .category-card small,
+  .card small {
+    font-size: 9px !important;
+    text-align: center !important;
+  }
+
+  /* WATCH HISTORY */
+  .watch-history {
+    margin-top: 25px !important;
+    padding: 0 18px !important;
+  }
+
+  .watch-history h2 {
+    font-size: 22px !important;
+  }
+
+  /* LATEST / NEWEST SECTIONS */
+  .latest-series,
+  .latest-movies,
+  .newest-drops {
+    padding: 0 18px !important;
+  }
+
+  /* BOTTOM NAV */
+  .bottom-nav,
+  .mobile-nav {
+    height: 72px !important;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 420px) {
+
+  .hero-content {
+    padding: 285px 18px 25px !important;
+  }
+
+  .hero-content h1 {
+    font-size: 32px !important;
+  }
+
+  .hero-content p {
+    font-size: 13px !important;
+  }
+
+  .featured-card,
+  .category-card,
+  .card {
+    height: 300px !important;
+    max-height: 300px !important;
+  }
+
+  .featured-card img,
+  .category-card img,
+  .card img {
+    height: 185px !important;
+  }
+
+  .featured-card h3,
+  .category-card h3,
+  .card h3 {
+    font-size: 11px !important;
+  }
+  }
