@@ -673,3 +673,126 @@ main {
     height: 130px;
   }
   }
+/* ================================
+   PRATIK ANIME STREAM
+   20 CARDS - RIGHT SCROLL
+================================ */
+
+/* Series / Movies / Cartoon horizontal row */
+.latest-series .cards,
+.latest-movies .cards,
+.latest-cartoon .cards,
+.latest-series,
+.latest-movies,
+.latest-cartoon {
+    width: 100%;
+}
+
+/* CARD ROW */
+.latest-series .cards,
+.latest-movies .cards,
+.latest-cartoon .cards {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 12px !important;
+    padding: 5px 0 18px !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 20 cards */
+.latest-series .card,
+.latest-movies .card,
+.latest-cartoon .card {
+    flex: 0 0 145px !important;
+    width: 145px !important;
+    min-width: 145px !important;
+    height: 300px !important;
+    max-height: 300px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    background: #171717 !important;
+    border: 1px solid #292929 !important;
+}
+
+/* POSTER */
+.latest-series .card img,
+.latest-movies .card img,
+.latest-cartoon .card img {
+    width: 100% !important;
+    height: 205px !important;
+    object-fit: cover !important;
+    display: block !important;
+    background: linear-gradient(135deg, #260d1c, #4a102b);
+}
+
+/* CARD TEXT */
+.latest-series .card h3,
+.latest-movies .card h3,
+.latest-cartoon .card h3 {
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+    margin: 8px !important;
+    color: #fff !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.latest-series .card p,
+.latest-movies .card p,
+.latest-cartoon .card p {
+    font-size: 10px !important;
+    color: #aaa !important;
+    margin: 0 8px 8px !important;
+}
+
+/* HORIZONTAL SCROLLBAR */
+.latest-series .cards::-webkit-scrollbar,
+.latest-movies .cards::-webkit-scrollbar,
+.latest-cartoon .cards::-webkit-scrollbar {
+    height: 5px;
+}
+
+.latest-series .cards::-webkit-scrollbar-thumb,
+.latest-movies .cards::-webkit-scrollbar-thumb,
+.latest-cartoon .cards::-webkit-scrollbar-thumb {
+    background: #ed1645;
+    border-radius: 10px;
+}
+
+.latest-series .cards::-webkit-scrollbar-track,
+.latest-movies .cards::-webkit-scrollbar-track,
+.latest-cartoon .cards::-webkit-scrollbar-track {
+    background: #111;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .latest-series .cards,
+    .latest-movies .cards,
+    .latest-cartoon .cards {
+        gap: 12px !important;
+        padding-left: 2px !important;
+        padding-right: 20px !important;
+    }
+
+    .latest-series .card,
+    .latest-movies .card,
+    .latest-cartoon .card {
+        flex: 0 0 145px !important;
+        width: 145px !important;
+        min-width: 145px !important;
+        height: 300px !important;
+    }
+
+    .latest-series .card img,
+    .latest-movies .card img,
+    .latest-cartoon .card img {
+        height: 205px !important;
+    }
+	  }
