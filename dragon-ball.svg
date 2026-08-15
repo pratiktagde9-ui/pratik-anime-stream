@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700">
+<defs><linearGradient id="g" x2="0" y2="1"><stop stop-color="#f39a0c"/><stop offset="1" stop-color="#080808"/></linearGradient></defs>
+<rect width="700" height="700" rx="55" fill="url(#g)"/>
+<circle cx="350" cy="290" r="210" fill="rgba(255,255,255,.08)"/>
+<text x="350" y="360" text-anchor="middle" font-size="210">🐉</text>
+<text x="350" y="590" text-anchor="middle" font-family="Arial" font-size="48" font-weight="900" fill="white">DRAGON BALL</text>
+</svg>
