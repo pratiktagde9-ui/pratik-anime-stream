@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pratik Anime Stream</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo-link" href="#"><img src="assets/logo.png" class="logo" alt="Pratik Anime Stream"></a>
+  <div class="header-icons">
+    <button>⌕</button><button>♡</button><button>⋮</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-image"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="search-box">
+    <input id="search" type="search" placeholder="Search" aria-label="Search">
+    <button id="searchBtn">⌕</button>
+  </div>
+
+  <div class="feature-grid">
+    <a class="feature feature-red" href="#">
+      <img src="assets/dragon-ball.svg" alt="Dragon Ball">
+      <strong>DRAGON BALL</strong>
+    </a>
+    <a class="feature feature-blue" href="#">
+      <img src="assets/shinchan.svg" alt="Shinchan">
+      <strong>SHINCHAN</strong>
+    </a>
+    <a class="feature feature-green" href="#">
+      <img src="assets/transformers.svg" alt="Transformers">
+      <strong>TRANSFORMERS</strong>
+    </a>
+  </div>
+</section>
+
+<section class="section history">
+  <div class="heading"><h2>Watch History</h2><button id="clear">♲</button></div>
+  <div id="historyText">Your watch history will appear here.</div>
+</section>
+
+<section class="section">
+  <div class="heading"><h2>Latest Series</h2><a href="#">View All ›</a></div>
+  <div id="series" class="poster-row"></div>
+</section>
+
+<section class="section">
+  <div class="heading"><h2>Latest Movies</h2><a href="#">View All ›</a></div>
+  <div id="movies" class="poster-row"></div>
+</section>
+
+<section class="section">
+  <div class="heading"><h2>Fresh Cartoon Films</h2><a href="#">View All ›</a></div>
+  <div id="cartoons" class="poster-row"></div>
+</section>
+
+<section class="section">
+  <div class="heading"><h2>Popular Movies</h2><a href="#">View All ›</a></div>
+  <div id="popular" class="poster-row"></div>
+</section>
+
+<section class="az section">
+  <h2>Quick A to Z Navigation</h2>
+  <div class="letters">
+    <button>#</button><button>A</button><button>B</button><button>C</button><button>D</button><button>E</button><button>F</button><button>G</button><button>H</button>
+    <button>I</button><button>J</button><button>K</button><button>L</button><button>M</button><button>N</button><button>O</button><button>P</button><button>Q</button>
+    <button>R</button><button>S</button><button>T</button><button>U</button><button>V</button><button>W</button><button>X</button><button>Y</button><button>Z</button>
+  </div>
+</section>
+</main>
+
+<nav class="bottom">
+  <a href="#"><span>▣</span>MOVIES</a>
+  <a href="#"><span>▱</span>SERIES</a>
+  <a href="#" class="active"><span>✦</span>HOME</a>
+  <a href="#"><span>♟</span>ANIME</a>
+  <a href="#"><span>⌁</span>CARTOON</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
