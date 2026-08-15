@@ -1,1 +1,0 @@
-Use assets/hero-reference.png and assets/logo.png. Put poster images in assets/series, assets/movies and assets/cartoon using the filenames in script.js.
