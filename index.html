@@ -1,88 +1,695 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Pratik Anime Stream</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratik Anime Stream</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="header">
-  <a class="logo-link" href="#"><img src="assets/logo.png" class="logo" alt="Pratik Anime Stream"></a>
-  <div class="header-icons">
-    <button>⌕</button><button>♡</button><button>⋮</button>
-  </div>
-</header>
 
-<main>
-<section class="hero">
-  <div class="hero-image"></div>
-  <div class="hero-overlay"></div>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
 
-  <div class="search-box">
-    <input id="search" type="search" placeholder="Search" aria-label="Search">
-    <button id="searchBtn">⌕</button>
-  </div>
+    <div class="logo-area">
+      <img src="assets/logo.png" alt="Pratik Anime Stream" class="logo">
+    </div>
 
-  <div class="feature-grid">
-    <a class="feature feature-red" href="#">
-      <img src="assets/dragon-ball.svg" alt="Dragon Ball">
-      <strong>DRAGON BALL</strong>
-    </a>
-    <a class="feature feature-blue" href="#">
-      <img src="assets/shinchan.png" alt="Shinchan">
-      <strong>SHINCHAN</strong>
-    </a>
-    <a class="feature feature-green" href="#">
-      <img src="assets/transformers.svg" alt="Transformers">
-      <strong>TRANSFORMERS</strong>
-    </a>
-  </div>
-</section>
+    <div class="header-actions">
+      <button id="searchBtn" aria-label="Search">⌕</button>
+      <button aria-label="Favorites">♡</button>
+      <button aria-label="Menu">⋮</button>
+    </div>
 
-<section class="section history">
-  <div class="heading"><h2>Watch History</h2><button id="clear">♲</button></div>
-  <div id="historyText">Your watch history will appear here.</div>
-</section>
+  </header>
 
-<section class="section">
-  <div class="heading"><h2>Latest Series</h2><a href="#">View All ›</a></div>
-  <div id="series" class="poster-row"></div>
-</section>
 
-<section class="section">
-  <div class="heading"><h2>Latest Movies</h2><a href="#">View All ›</a></div>
-  <div id="movies" class="poster-row"></div>
-</section>
+  <!-- ================= SEARCH ================= -->
+  <section class="search-area">
 
-<section class="section">
-  <div class="heading"><h2>Fresh Cartoon Films</h2><a href="#">View All ›</a></div>
-  <div id="cartoons" class="poster-row"></div>
-</section>
+    <div class="search-box">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search"
+        autocomplete="off"
+      >
 
-<section class="section">
-  <div class="heading"><h2>Popular Movies</h2><a href="#">View All ›</a></div>
-  <div id="popular" class="poster-row"></div>
-</section>
+      <button id="searchBtn2">⌕</button>
+    </div>
 
-<section class="az section">
-  <h2>Quick A to Z Navigation</h2>
-  <div class="letters">
-    <button>#</button><button>A</button><button>B</button><button>C</button><button>D</button><button>E</button><button>F</button><button>G</button><button>H</button>
-    <button>I</button><button>J</button><button>K</button><button>L</button><button>M</button><button>N</button><button>O</button><button>P</button><button>Q</button>
-    <button>R</button><button>S</button><button>T</button><button>U</button><button>V</button><button>W</button><button>X</button><button>Y</button><button>Z</button>
-  </div>
-</section>
-</main>
+  </section>
 
-<nav class="bottom">
-  <a href="#"><span>▣</span>MOVIES</a>
-  <a href="#"><span>▱</span>SERIES</a>
-  <a href="#" class="active"><span>✦</span>HOME</a>
-  <a href="#"><span>♟</span>ANIME</a>
-  <a href="#"><span>⌁</span>CARTOON</a>
-</nav>
 
-<script src="script.js"></script>
-</body>
-</html>
+  <!-- ================= TOP 8 CARDS ================= -->
+  <section class="top-categories">
+
+    <div class="top-scroll">
+
+      <article class="top-card">
+        <img src="assets/top/01.png" alt="Beyblade">
+        <div class="top-title">BEYBLADE</div>
+      </article>
+
+      <article class="top-card">
+        <img src="assets/top/02.png" alt="Transformers">
+        <div class="top-title">TRANSFORMERS</div>
+      </article>
+
+      <article class="top-card">
+        <img src="assets/top/03.png" alt="Shinchan">
+        <div class="top-title">SHINCHAN</div>
+      </article>
+
+      <article class="top-card">
+        <img src="assets/top/04.png" alt="Dragon Ball">
+        <div class="top-title">DRAGON BALL</div>
+      </article>
+
+      <article class="top-card">
+        <img src="assets/top/05.png" alt="Pokemon">
+        <div class="top-title">POKÉMON</div>
+      </article>
+
+      <article class="top-card">
+        <img src="assets/top/06.png" alt="Doraemon">
+        <div class="top-title">DORAEMON</div>
+      </article>
+
+      <article class="top-card">
+        <img src="assets/top/07.png" alt="Ben 10">
+        <div class="top-title">BEN 10</div>
+      </article>
+
+      <article class="top-card">
+        <img src="assets/top/08.png" alt="Ninja Hattori">
+        <div class="top-title">NINJA HATTORI</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= WATCH HISTORY ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Watch History</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards" id="history">
+      <article class="card">
+        <img src="assets/posters/series/01.svg" alt="Black Clover">
+        <div class="title">Black Clover</div>
+        <div class="meta">Episode 1</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/02.svg" alt="Demon Slayer">
+        <div class="title">Demon Slayer</div>
+        <div class="meta">Episode 1</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/03.svg" alt="Jujutsu Kaisen">
+        <div class="title">Jujutsu Kaisen</div>
+        <div class="meta">Episode 1</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/04.svg" alt="Death Note">
+        <div class="title">Death Note</div>
+        <div class="meta">Episode 1</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/05.svg" alt="My Hero Academia">
+        <div class="title">My Hero Academia</div>
+        <div class="meta">Episode 1</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/06.svg" alt="Naruto">
+        <div class="title">Naruto</div>
+        <div class="meta">Episode 1</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/07.svg" alt="One Piece">
+        <div class="title">One Piece</div>
+        <div class="meta">Episode 1</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/08.svg" alt="Attack on Titan">
+        <div class="title">Attack on Titan</div>
+        <div class="meta">Episode 1</div>
+      </article>
+    </div>
+
+  </section>
+
+
+  <!-- ================= NEWEST DROPS ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Newest Drops</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <img src="assets/posters/series/01.svg" alt="Black Clover">
+        <div class="title">Black Clover</div>
+        <div class="meta">25 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/02.svg" alt="Demon Slayer">
+        <div class="title">Demon Slayer</div>
+        <div class="meta">20 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/03.svg" alt="Jujutsu Kaisen">
+        <div class="title">Jujutsu Kaisen</div>
+        <div class="meta">24 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/04.svg" alt="Death Note">
+        <div class="title">Death Note</div>
+        <div class="meta">37 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/05.svg" alt="My Hero Academia">
+        <div class="title">My Hero Academia</div>
+        <div class="meta">13 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/06.svg" alt="Naruto">
+        <div class="title">Naruto</div>
+        <div class="meta">220 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/07.svg" alt="One Piece">
+        <div class="title">One Piece</div>
+        <div class="meta">Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/08.svg" alt="Attack on Titan">
+        <div class="title">Attack on Titan</div>
+        <div class="meta">Episodes</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= NETWORK ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Network</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <img src="assets/posters/series/01.svg" alt="Anime Network">
+        <div class="title">Anime Network</div>
+        <div class="meta">Series</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/02.svg" alt="Action">
+        <div class="title">Action</div>
+        <div class="meta">Anime</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/03.svg" alt="Adventure">
+        <div class="title">Adventure</div>
+        <div class="meta">Anime</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/04.svg" alt="Fantasy">
+        <div class="title">Fantasy</div>
+        <div class="meta">Anime</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/05.svg" alt="Comedy">
+        <div class="title">Comedy</div>
+        <div class="meta">Anime</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/06.svg" alt="Drama">
+        <div class="title">Drama</div>
+        <div class="meta">Anime</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/07.svg" alt="Romance">
+        <div class="title">Romance</div>
+        <div class="meta">Anime</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/08.svg" alt="Thriller">
+        <div class="title">Thriller</div>
+        <div class="meta">Anime</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= STREAM IN YOUR LANGUAGES ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Stream in Your Languages</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards language-cards">
+
+      <article class="card language-card">
+        <div class="language-name">HINDI</div>
+        <div class="meta">Hindi Dubbed</div>
+      </article>
+
+      <article class="card language-card">
+        <div class="language-name">ENGLISH</div>
+        <div class="meta">English Dubbed</div>
+      </article>
+
+      <article class="card language-card">
+        <div class="language-name">JAPANESE</div>
+        <div class="meta">Japanese</div>
+      </article>
+
+      <article class="card language-card">
+        <div class="language-name">TAMIL</div>
+        <div class="meta">Tamil Dubbed</div>
+      </article>
+
+      <article class="card language-card">
+        <div class="language-name">TELUGU</div>
+        <div class="meta">Telugu Dubbed</div>
+      </article>
+
+      <article class="card language-card">
+        <div class="language-name">MARATHI</div>
+        <div class="meta">Marathi</div>
+      </article>
+
+      <article class="card language-card">
+        <div class="language-name">BENGALI</div>
+        <div class="meta">Bengali</div>
+      </article>
+
+      <article class="card language-card">
+        <div class="language-name">MALAYALAM</div>
+        <div class="meta">Malayalam</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MOST WATCHED SHOWS ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Most-Watched Shows</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <img src="assets/posters/series/01.svg" alt="Naruto">
+        <div class="title">Naruto</div>
+        <div class="meta">220 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/02.svg" alt="Demon Slayer">
+        <div class="title">Demon Slayer</div>
+        <div class="meta">20 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/03.svg" alt="Jujutsu Kaisen">
+        <div class="title">Jujutsu Kaisen</div>
+        <div class="meta">24 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/04.svg" alt="Death Note">
+        <div class="title">Death Note</div>
+        <div class="meta">37 Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/05.svg" alt="My Hero Academia">
+        <div class="title">My Hero Academia</div>
+        <div class="meta">Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/06.svg" alt="Attack on Titan">
+        <div class="title">Attack on Titan</div>
+        <div class="meta">Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/07.svg" alt="One Piece">
+        <div class="title">One Piece</div>
+        <div class="meta">Episodes</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/08.svg" alt="Sword Art Online">
+        <div class="title">Sword Art Online</div>
+        <div class="meta">Episodes</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= NEW ANIME ARRIVALS ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>New Anime Arrivals</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <img src="assets/posters/series/01.svg" alt="Anime 1">
+        <div class="title">New Anime 1</div>
+        <div class="meta">New</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/02.svg" alt="Anime 2">
+        <div class="title">New Anime 2</div>
+        <div class="meta">New</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/03.svg" alt="Anime 3">
+        <div class="title">New Anime 3</div>
+        <div class="meta">New</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/04.svg" alt="Anime 4">
+        <div class="title">New Anime 4</div>
+        <div class="meta">New</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/05.svg" alt="Anime 5">
+        <div class="title">New Anime 5</div>
+        <div class="meta">New</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/06.svg" alt="Anime 6">
+        <div class="title">New Anime 6</div>
+        <div class="meta">New</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/07.svg" alt="Anime 7">
+        <div class="title">New Anime 7</div>
+        <div class="meta">New</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/series/08.svg" alt="Anime 8">
+        <div class="title">New Anime 8</div>
+        <div class="meta">New</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= JUST IN CARTOON SERIES ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Just In: Cartoon Series</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <img src="assets/posters/cartoons/01.svg" alt="Shinchan">
+        <div class="title">Shinchan</div>
+        <div class="meta">Cartoon</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/02.svg" alt="Doraemon">
+        <div class="title">Doraemon</div>
+        <div class="meta">Cartoon</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/03.svg" alt="Ben 10">
+        <div class="title">Ben 10</div>
+        <div class="meta">Cartoon</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/04.svg" alt="Pokemon">
+        <div class="title">Pokémon</div>
+        <div class="meta">Cartoon</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/05.svg" alt="Dragon Ball">
+        <div class="title">Dragon Ball</div>
+        <div class="meta">Cartoon</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/06.svg" alt="Ninja Hattori">
+        <div class="title">Ninja Hattori</div>
+        <div class="meta">Cartoon</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/07.svg" alt="Transformers">
+        <div class="title">Transformers</div>
+        <div class="meta">Cartoon</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/08.svg" alt="Beyblade">
+        <div class="title">Beyblade</div>
+        <div class="meta">Cartoon</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MOST WATCHED FILM ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Most-Watched Film</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <img src="assets/posters/movies/01.svg" alt="A Silent Voice">
+        <div class="title">A Silent Voice</div>
+        <div class="meta">130 min</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/02.svg" alt="Your Name">
+        <div class="title">Your Name</div>
+        <div class="meta">107 min</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/03.svg" alt="Demon Slayer">
+        <div class="title">Demon Slayer</div>
+        <div class="meta">117 min</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/04.svg" alt="Spirited Away">
+        <div class="title">Spirited Away</div>
+        <div class="meta">125 min</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/05.svg" alt="Jujutsu Kaisen">
+        <div class="title">Jujutsu Kaisen</div>
+        <div class="meta">105 min</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/06.svg" alt="Akira">
+        <div class="title">Akira</div>
+        <div class="meta">125 min</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/07.svg" alt="No Game No Life">
+        <div class="title">No Game No Life</div>
+        <div class="meta">110 min</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/08.svg" alt="My Hero Academia">
+        <div class="title">My Hero Academia</div>
+        <div class="meta">96 min</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= LATEST ANIME MOVIE ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Latest Anime Movie</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <img src="assets/posters/movies/01.svg" alt="A Silent Voice">
+        <div class="title">A Silent Voice</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/02.svg" alt="Your Name">
+        <div class="title">Your Name</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/03.svg" alt="Demon Slayer">
+        <div class="title">Demon Slayer</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/04.svg" alt="Spirited Away">
+        <div class="title">Spirited Away</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/05.svg" alt="Jujutsu Kaisen">
+        <div class="title">Jujutsu Kaisen</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/06.svg" alt="Akira">
+        <div class="title">Akira</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/07.svg" alt="No Game No Life">
+        <div class="title">No Game No Life</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/movies/08.svg" alt="My Hero Academia">
+        <div class="title">My Hero Academia</div>
+        <div class="meta">Movie</div>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FRESH CARTOON FILM ================= -->
+  <section class="content-section">
+
+    <div class="section-heading">
+      <h2>Fresh Cartoon Film</h2>
+      <span>View All ›</span>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <img src="assets/posters/cartoons/01.svg" alt="Shinchan">
+        <div class="title">Shinchan Movie</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/02.svg" alt="Doraemon">
+        <div class="title">Doraemon Movie</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/03.svg" alt="Ben 10">
+        <div class="title">Ben 10 Movie</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/04.svg" alt="Pokemon">
+        <div class="title">Pokémon Movie</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/05.svg" alt="Dragon Ball">
+        <div class="title">Dragon Ball Movie</div>
+        <div class="meta">Movie</div>
+      </article>
+
+      <article class="card">
+        <img src="assets/posters/cartoons/06.svg" alt="Ninja Hattori">
+        <div class="title
