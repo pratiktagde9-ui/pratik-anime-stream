@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="700">
-<defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#161616"/><stop offset=".55" stop-color="#3b1020"/><stop offset="1" stop-color="#080808"/></linearGradient></defs>
-<rect width="500" height="700" rx="24" fill="url(#g)"/>
-<text x="250" y="320" text-anchor="middle" font-size="150">🌿</text>
-<text x="250" y="590" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700" fill="white">Pokémon the Movie: Secrets o</text>
-</svg>
