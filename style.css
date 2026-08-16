@@ -177,10 +177,16 @@ a{
 .top-card img{
   width:100%;
   height:190px;
-  object-fit:contain;
+  object-fit:cover;
   display:block;
-  padding:8px;
+  padding:0;
 }
+  
+  
+  
+  
+  
+
 
 .top-title{
   position:absolute;
