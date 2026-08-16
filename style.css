@@ -558,3 +558,12 @@ a{
     font-size:9px;
   }
  }
+/* BEN 10 TOP CARD */
+.top-card img[src*="07.png"] {
+  object-fit: contain;
+  width: 100%;
+  height: 190px;
+  padding: 0;
+  transform: scale(1.45);
+  mix-blend-mode: screen;
+  }
