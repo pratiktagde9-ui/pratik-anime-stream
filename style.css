@@ -699,3 +699,81 @@ section::after {
 
     .top-card {
         flex: 
+/* ==============================
+   PRATIK ANIME STREAM - HERO
+   ============================== */
+
+.hero-banner {
+    position: relative;
+    width: calc(100% - 24px);
+    height: 320px;
+    margin: 15px 12px 25px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #080808;
+    border: 1px solid #222;
+    box-shadow: 0 8px 30px rgba(0,0,0,.6);
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.35) 45%,
+        rgba(0,0,0,.05)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    margin: 0 0 6px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    margin: 0;
+    color: #ddd;
+    font-size: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .hero-banner {
+        width: calc(100% - 20px);
+        height: 300px;
+        margin: 12px 10px 22px;
+        border-radius: 18px;
+    }
+
+    .hero-overlay {
+        padding: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+       }
