@@ -631,3 +631,71 @@ section::after {
 /* =========================================================
    END
    ========================================================= */
+/* =========================
+   HERO BANNER
+========================= */
+
+.hero-banner {
+    width: calc(100% - 32px);
+    height: 240px;
+    margin: 20px 16px 25px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+    border: 1px solid #222;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.05) 65%
+    );
+    pointer-events: none;
+}
+
+/* HERO ke baad Top Cards */
+.top-categories {
+    padding-top: 8px;
+    margin-top: 0;
+}
+
+.top-scroll {
+    margin-top: 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero-banner {
+        width: calc(100% - 24px);
+        height: 210px;
+        margin: 16px 12px 22px;
+        border-radius: 16px;
+    }
+
+    .top-categories {
+        padding: 8px 12px 20px;
+    }
+
+    .top-scroll {
+        gap: 12px;
+    }
+
+    .top-card {
+        flex: 
