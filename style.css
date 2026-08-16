@@ -1,0 +1,757 @@
+/* =========================================================
+   PRATIK ANIME STREAM
+   COMPLETE MOBILE ANIME STREAMING DESIGN
+   ========================================================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+    background:#030303;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+}
+
+body{
+    padding-bottom:78px;
+}
+
+button,
+input{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header{
+    height:58px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:4px 16px;
+
+    background:rgba(0,0,0,.96);
+    border-bottom:1px solid #191919;
+}
+
+.logo{
+    width:145px;
+    height:50px;
+    object-fit:contain;
+}
+
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.header-icons button{
+    width:40px;
+    height:40px;
+
+    border:1px solid #292929;
+    border-radius:50%;
+
+    background:#111;
+    color:#fff;
+
+    font-size:21px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+    margin-top:58px;
+    height:470px;
+    position:relative;
+    overflow:hidden;
+
+    background:#000;
+}
+
+.hero-image{
+    position:absolute;
+    inset:0;
+
+    background-image:url("assets/hero-reference.jpg");
+    background-position:center top;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.10) 0%,
+            rgba(0,0,0,.20) 45%,
+            #030303 100%
+        );
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-box{
+    position:absolute;
+
+    z-index:10;
+
+    left:4%;
+    right:4%;
+    top:315px;
+
+    height:58px;
+
+    border:2px solid #eee;
+    border-radius:32px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:rgba(0,0,0,.30);
+}
+
+.search-box input{
+    flex:1;
+    min-width:0;
+
+    height:100%;
+
+    border:0;
+    outline:0;
+
+    background:transparent;
+    color:#fff;
+
+    padding:0 22px;
+
+    font-size:17px;
+}
+
+.search-box input::placeholder{
+    color:#eee;
+}
+
+.search-box button{
+    width:65px;
+    height:100%;
+
+    border:0;
+    background:transparent;
+    color:#fff;
+
+    font-size:27px;
+}
+
+/* =========================================================
+   TOP CATEGORY SECTION
+   ========================================================= */
+
+.top-categories{
+    position:relative;
+    z-index:20;
+
+    padding:12px 16px 24px;
+
+    margin-top:-8px;
+}
+
+/* Horizontal scrolling area */
+
+.top-scroll{
+    display:flex;
+    gap:12px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    padding:2px 0 10px;
+
+    scroll-behavior:smooth;
+
+    scrollbar-width:none;
+}
+
+.top-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+/* =========================================================
+   TOP CARD
+   ========================================================= */
+
+.top-card{
+    flex:0 0 210px;
+
+    height:270px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px 25px 18px 18px;
+
+    border:2px solid #191919;
+
+    background:#111;
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,.55);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.top-card:active{
+    transform:scale(.97);
+}
+
+/* Different card colors */
+
+.top-card:nth-child(1){
+    background:#ec1644;
+}
+
+.top-card:nth-child(2){
+    background:#11b7d6;
+}
+
+.top-card:nth-child(3){
+    background:#14a967;
+}
+
+.top-card:nth-child(4){
+    background:#ec1644;
+}
+
+.top-card:nth-child(5){
+    background:#f0b900;
+}
+
+.top-card:nth-child(6){
+    background:#9b59b6;
+}
+
+.top-card:nth-child(7){
+    background:#e67e22;
+}
+
+.top-card:nth-child(8){
+    background:#34495e;
+}
+
+/* =========================================================
+   TOP CARD IMAGE
+   ========================================================= */
+
+.top-card img{
+    display:block;
+
+    width:100%;
+    height:218px;
+
+    object-fit:cover;
+    object-position:center;
+
+    padding:0;
+
+    border:0;
+}
+
+/*
+   Ben 10 image.
+   If 07.png is your Ben 10 image and contains black space,
+   this keeps it centered inside the card.
+*/
+
+.top-card img[src*="07.png"]{
+    object-fit:contain;
+    object-position:center;
+
+    padding:5px;
+
+    transform:scale(1.03);
+}
+
+/* =========================================================
+   TOP CARD TITLE
+   ========================================================= */
+
+.top-title{
+    position:absolute;
+
+    left:6px;
+    right:6px;
+    bottom:6px;
+
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0 8px;
+
+    background:#050505;
+
+    color:#fff;
+
+    border-radius:0 0 14px 14px;
+
+    font-size:13px;
+    font-weight:800;
+
+    text-align:center;
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+    text-transform:uppercase;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.section{
+    padding:0 16px 20px;
+}
+
+.heading{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-bottom:14px;
+}
+
+.heading h2{
+    display:flex;
+    align-items:center;
+
+    margin:0;
+
+    font-size:20px;
+    font-weight:700;
+}
+
+.heading h2::before{
+    content:"";
+
+    display:inline-block;
+
+    width:4px;
+    height:27px;
+
+    margin-right:9px;
+
+    background:#18cbe7;
+
+    border-radius:2px;
+}
+
+.heading a{
+    color:#18cbe7;
+    font-size:12px;
+}
+
+/* =========================================================
+   POSTER ROW
+   ========================================================= */
+
+.poster-row{
+    display:flex;
+    gap:10px;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    padding-bottom:12px;
+
+    scroll-behavior:smooth;
+
+    scrollbar-width:thin;
+
+    -webkit-overflow-scrolling:touch;
+}
+
+.poster-row::-webkit-scrollbar{
+    height:4px;
+}
+
+.poster-row::-webkit-scrollbar-track{
+    background:#111;
+}
+
+.poster-row::-webkit-scrollbar-thumb{
+    background:#333;
+    border-radius:8px;
+}
+
+/* =========================================================
+   POSTER CARD
+   ========================================================= */
+
+.card{
+    flex:0 0 145px;
+
+    overflow:hidden;
+
+    scroll-snap-align:start;
+}
+
+.card img{
+    display:block;
+
+    width:145px;
+    height:205px;
+
+    object-fit:cover;
+
+    background:#151515;
+
+    border-radius:5px;
+}
+
+.card .title{
+    margin-top:7px;
+
+    font-size:12px;
+    line-height:1.25;
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.card .meta{
+    margin-top:4px;
+
+    font-size:10px;
+
+    color:#888;
+}
+
+/* =========================================================
+   WATCH HISTORY / NEWEST / NETWORK
+   ========================================================= */
+
+.history{
+    min-height:120px;
+}
+
+#historyText{
+    color:#777;
+    font-size:14px;
+    padding:4px 14px 10px;
+}
+
+/* =========================================================
+   A-Z
+   ========================================================= */
+
+.az h2{
+    font-size:20px;
+    margin:0 0 16px;
+}
+
+.letters{
+    display:grid;
+
+    grid-template-columns:repeat(9,1fr);
+
+    gap:5px;
+}
+
+.letters button{
+    height:48px;
+
+    border:0;
+    border-radius:5px;
+
+    background:#10101a;
+    color:#aaa;
+
+    font-weight:bold;
+}
+
+/* =========================================================
+   BOTTOM NAVIGATION
+   ========================================================= */
+
+.bottom{
+    height:76px;
+
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    z-index:2000;
+
+    display:flex;
+    justify-content:space-around;
+
+    background:rgba(0,0,0,.97);
+
+    border-top:1px solid #1b1b1b;
+}
+
+.bottom a{
+    width:20%;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:5px;
+
+    font-size:10px;
+
+    color:#888;
+}
+
+.bottom span{
+    font-size:22px;
+    line-height:1;
+}
+
+.bottom .active{
+    color:#18cbe7;
+    border-bottom:3px solid #18cbe7;
+}
+
+/* =========================================================
+   MOBILE - 700px
+   ========================================================= */
+
+@media(max-width:700px){
+
+    .header{
+        height:58px;
+        padding:4px 12px;
+    }
+
+    .logo{
+        width:130px;
+        height:48px;
+    }
+
+    .header-icons button{
+        width:38px;
+        height:38px;
+        font-size:19px;
+    }
+
+    .hero{
+        height:470px;
+    }
+
+    .hero-image{
+        background-size:auto 470px;
+        background-position:center top;
+    }
+
+    .search-box{
+        top:315px;
+        height:56px;
+    }
+
+    .search-box input{
+        font-size:16px;
+        padding-left:20px;
+    }
+
+    .top-categories{
+        padding:10px 16px 22px;
+    }
+
+    .top-scroll{
+        gap:12px;
+    }
+
+    .top-card{
+        flex:0 0 210px;
+        height:270px;
+    }
+
+    .top-card img{
+        height:218px;
+    }
+
+    .section{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .heading h2{
+        font-size:19px;
+    }
+
+    .card{
+        flex:0 0 145px;
+    }
+
+    .card img{
+        width:145px;
+        height:205px;
+    }
+}
+
+/* =========================================================
+   MOBILE - 430px
+   ========================================================= */
+
+@media(max-width:430px){
+
+    .hero{
+        height:470px;
+    }
+
+    .hero-image{
+        background-size:auto 460px;
+        background-position:center top;
+    }
+
+    .search-box{
+        left:4%;
+        right:4%;
+        top:315px;
+        height:55px;
+    }
+
+    .top-card{
+        flex:0 0 210px;
+        height:270px;
+    }
+
+    .top-card img{
+        height:218px;
+    }
+
+    .top-title{
+        height:48px;
+        font-size:12px;
+    }
+
+    .heading h2{
+        font-size:18px;
+    }
+
+    .heading a{
+        font-size:11px;
+    }
+
+    .card{
+        flex:0 0 145px;
+    }
+
+    .card img{
+        width:145px;
+        height:205px;
+    }
+
+    .card .title{
+        font-size:12px;
+    }
+
+    .bottom{
+        height:74px;
+    }
+}
+
+/* =========================================================
+   SMALL PHONES - 380px
+   ========================================================= */
+
+@media(max-width:380px){
+
+    .logo{
+        width:118px;
+    }
+
+    .header-icons{
+        gap:5px;
+    }
+
+    .header-icons button{
+        width:35px;
+        height:35px;
+    }
+
+    .hero{
+        height:450px;
+    }
+
+    .search-box{
+        top:300px;
+        height:52px;
+    }
+
+    .top-card{
+        flex:0 0 190px;
+        height:250px;
+    }
+
+    .top-card img{
+        height:200px;
+    }
+
+    .top-title{
+        height:44px;
+        font-size:11px;
+    }
+
+    .card{
+        flex:0 0 135px;
+    }
+
+    .card img{
+        width:135px;
+        height:190px;
+    }
+
+    .letters{
+        grid-template-columns:repeat(7,1fr);
+    }
+  }
