@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratik Anime Stream</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #050505;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    .header {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 22px;
+      background: #050505;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 190px;
+      max-height: 62px;
+      object-fit: contain;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .header-actions button {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid #333;
+      background: #111;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero-section {
+      position: relative;
+      min-height: 650px;
+      padding: 30px 30px 25px;
+      overflow: hidden;
+      background: #050505;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,.15),
+          rgba(0,0,0,.65),
+          #050505
+        ),
+        url("assets/hero-banner.png") center center / cover no-repeat;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* SEARCH */
+    .hero-search {
+      width: 90%;
+      max-width: 950px;
+      height: 62px;
+      margin: 0 auto 35px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      border: 2px solid rgba(255,255,255,.8);
+      border-radius: 35px;
+      background: rgba(0,0,0,.25);
+      backdrop-filter: blur(5px);
+    }
+
+    .hero-search input {
+      flex: 1;
+      width: 100%;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: white;
+      font-size: 19px;
+    }
+
+    .hero-search input::placeholder {
+      color: #ddd;
+    }
+
+    .hero-search span {
+      font-size: 25px;
+    }
+
+    /* 8 CARDS */
+    .hero-categories {
+      width: 100%;
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      padding: 10px 5px 25px;
+      scrollbar-width: none;
+    }
+
+    .hero-categories::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hero-card {
+      flex: 0 0 205px;
+      height: 315px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,.15);
+      box-shadow: 0 8px 25px rgba(0,0,0,.7);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-card-title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 13px 5px;
+      text-align: center;
+      background: rgba(0,0,0,.92);
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    /* CONTENT */
+    .content-section {
+      position: relative;
+      z-index: 3;
+      padding: 15px 30px 40px;
+      background: #050505;
+    }
+
+    .section-title {
+      font-size: 25px;
+      margin: 15px 0 18px;
+    }
+
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .poster-card {
+      min-width: 0;
+    }
+
+    .poster-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .poster-card h3 {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1.4;
+      margin-top: 9px;
+      color: #eee;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+      .header {
+        height: 65px;
+        padding: 6px 12px;
+      }
+
+      .logo {
+        width: 145px;
+      }
+
+      .header-actions button {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+      }
+
+      .hero-section {
+        min-height: 480px;
+        padding: 20px 12px;
+      }
+
+      .hero-search {
+        width: 95%;
+        height: 52px;
+        margin-bottom: 25px;
+      }
+
+      .hero-search input {
+        font-size: 16px;
+      }
+
+      .hero-card {
+        flex-basis: 145px;
+        height: 225px;
+      }
+
+      .hero-card-title {
+        font-size: 13px;
+        padding: 9px 2px;
+      }
+
+      .hero-categories {
+        gap: 12px;
+      }
+
+      .content-section {
+        padding: 10px 12px 30px;
+      }
+
+      .section-title {
+        font-size: 21px;
+      }
+
+      .poster-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .poster-card h3 {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo-area">
+      <img
+        src="assets/logo.png"
+        alt="Pratik Anime Stream"
+        class="logo"
+      >
+    </div>
+
+    <div class="header-actions">
+      <button id="searchBtn" aria-label="Search">⌕</button>
+      <button aria-label="Favorites">♡</button>
+      <button aria-label="Menu">⋮</button>
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero-section">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+      <!-- SEARCH -->
+      <div class="hero-search">
+        <input
+          type="text"
+          id="heroSearch"
+          placeholder="Search"
+          autocomplete="off"
+        >
+        <span>⌕</span>
+      </div>
+
+
+      <!-- 8 HERO CARDS -->
+      <div class="hero-categories">
+
+        <article class="hero-card">
+          <img src="assets/top/01.png" alt="Anime 1">
+          <div class="hero-card-title">BEYBLADE</div>
+        </article>
+
+        <article class="hero-card">
+          <img src="assets/top/02.png" alt="Anime 2">
+          <div class="hero-card-title">TRANSFORMERS</div>
+        </article>
+
+        <article class="hero-card">
+          <img src="assets/top/03.png" alt="Anime 3">
+          <div class="hero-card-title">SHINCHAN</div>
+        </article>
+
+        <article class="hero-card">
+          <img src="assets/top/04.png" alt="Anime 4">
+          <div class="hero-card-title">DRAGON BALL</div>
+        </article>
+
+        <article class="hero-card">
+          <img src="assets/top/05.png" alt="Anime 5">
+          <div class="hero-card-title">POKÉMON</div>
+        </article>
+
+        <article class="hero-card">
+          <img src="assets/top/06.png" alt="Anime 6">
+          <div class="hero-card-title">BEN 10</div>
+        </article>
+
+        <article class="hero-card">
+          <img src="assets/top/07.png" alt="Anime 7">
+          <div class="hero-card-title">NARUTO</div>
+        </article>
+
+        <article class="hero-card">
+          <img src="assets/top/08.png" alt="Anime 8">
+          <div class="hero-card-title">DORAEMON</div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WATCH HISTORY -->
+  <section class="content-section">
+
+    <h2 class="section-title">Watch History</h2>
+
+    <div class="poster-grid">
+
+      <article class="poster-card">
+        <img src="assets/posters/01.png" alt="Pokémon">
+        <h3>Pokémon: Arceus and the Jewel of Life</h3>
+      </article>
+
+      <article class="poster-card">
+        <img src="assets/posters/02.png" alt="Anime">
+        <h3>Metal Fight Beyblade</h3>
+      </article>
+
+      <article class="poster-card">
+        <img src="assets/posters/03.png" alt="Pokémon">
+        <h3>Pokémon Ranger and the Temple of Sea</h3>
+      </article>
+
+      <article class="poster-card">
+        <img src="assets/posters/04.png" alt="Pokémon">
+        <h3>Pokémon the Movie</h3>
+      </article>
+
+    </div>
+
+
+    <!-- NEWEST DROPS -->
+    <h2 class="section-title">Newest Drops</h2>
+
+    <div class="poster-grid">
+
+      <article class="poster-card">
+        <img src="assets/posters/05.png" alt="Anime">
+        <h3>Newest Anime</h3>
+      </article>
+
+      <article class="poster-card">
+        <img src="assets/posters/06.png" alt="Anime">
+        <h3>Latest Episode</h3>
+      </article>
+
+      <article class="poster-card">
+        <img src="assets/posters/07.png" alt="Anime">
+        <h3>New Series</h3>
+      </article>
+
+      <article class="poster-card">
+        <img src="assets/posters/08.png" alt="Anime">
+        <h3>Latest Cartoon</h3>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
