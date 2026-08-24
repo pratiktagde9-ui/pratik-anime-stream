@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pratik Anime Stream</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🎌 Pratik Anime Stream</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">TV Series</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Genre</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search anime..."/>
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">NEW EPISODE</span>
+      <h1>Attack on Titan: Final Season</h1>
+      <p>The war for Paradis zeroes in on a single point as Marley sends its military.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-watch"><i class="fas fa-play"></i> Watch Now</a>
+        <a href="#" class="btn-info"><i class="fas fa-info-circle"></i> More Info</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="red">Latest</span> Episodes</h2>
+    <div class="anime-grid">
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/ff0000?text=Anime+1" alt="Anime"/><span class="ep-badge">EP 12</span></div><p class="card-title">Demon Slayer</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/ff0000?text=Anime+2" alt="Anime"/><span class="ep-badge">EP 8</span></div><p class="card-title">Jujutsu Kaisen</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/ff0000?text=Anime+3" alt="Anime"/><span class="ep-badge">EP 5</span></div><p class="card-title">One Piece</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/ff0000?text=Anime+4" alt="Anime"/><span class="ep-badge">EP 3</span></div><p class="card-title">Naruto Shippuden</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/ff0000?text=Anime+5" alt="Anime"/><span class="ep-badge">EP 20</span></div><p class="card-title">Dragon Ball Super</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/ff0000?text=Anime+6" alt="Anime"/><span class="ep-badge">EP 7</span></div><p class="card-title">My Hero Academia</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="red">Popular</span> Anime</h2>
+    <div class="anime-grid">
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/cc0000?text=Popular+1" alt="Anime"/><span class="ep-badge">EP 24</span></div><p class="card-title">Attack on Titan</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/cc0000?text=Popular+2" alt="Anime"/><span class="ep-badge">EP 13</span></div><p class="card-title">Tokyo Ghoul</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/cc0000?text=Popular+3" alt="Anime"/><span class="ep-badge">EP 16</span></div><p class="card-title">Bleach</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/cc0000?text=Popular+4" alt="Anime"/><span class="ep-badge">EP 11</span></div><p class="card-title">Fullmetal Alchemist</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/cc0000?text=Popular+5" alt="Anime"/><span class="ep-badge">EP 9</span></div><p class="card-title">Hunter x Hunter</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/cc0000?text=Popular+6" alt="Anime"/><span class="ep-badge">EP 6</span></div><p class="card-title">Sword Art Online</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="red">Recent</span> Movies</h2>
+    <div class="anime-grid">
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/880000?text=Movie+1" alt="Movie"/><span class="ep-badge movie">MOVIE</span></div><p class="card-title">Demon Slayer: Mugen Train</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/880000?text=Movie+2" alt="Movie"/><span class="ep-badge movie">MOVIE</span></div><p class="card-title">Your Name</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/880000?text=Movie+3" alt="Movie"/><span class="ep-badge movie">MOVIE</span></div><p class="card-title">Spirited Away</p></div>
+      <div class="card"><div class="card-img"><img src="https://via.placeholder.com/220x310/111/880000?text=Movie+4" alt="Movie"/><span class="ep-badge movie">MOVIE</span></div><p class="card-title">Jujutsu Kaisen 0</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">🎌 Pratik Anime Stream</div>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">TV Series</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+    <p class="footer-copy">© 2024 Pratik Anime Stream. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
