@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratik Anime Stream</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="topbar">
+      <div class="brand">
+        <span class="name">PRATIK</span>
+        <span class="tag">ANIME STREAM</span>
+        <span class="jp">アニメストリーム</span>
+      </div>
+      <div class="icon-group">
+        <svg class="icon-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <svg class="icon-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        <svg class="icon-btn" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
+      </div>
+    </div>
+
+    <div class="hero-slash"></div>
+    <div class="hero-slash right"></div>
+
+    <div class="welcome-badge">WELCOME TO //</div>
+    <div class="hero-title">
+      <span class="l1">PRATIK</span>
+      <span class="l2">ANIME STREAM</span>
+    </div>
+    <p class="hero-sub">Watch Anime Online in HD — Anytime, Anywhere</p>
+
+    <div class="feature-row">
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"/></svg></div>
+        <div class="feature-text"><div class="ft-title">HD QUALITY</div><div class="ft-sub">Best Anime in HD</div></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></svg></div>
+        <div class="feature-text"><div class="ft-title">DAILY UPDATES</div><div class="ft-sub">New Episodes Everyday</div></div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="13" rx="1"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="feature-text"><div class="ft-title">ANY DEVICE</div><div class="ft-sub">Watch on Any Device</div></div>
+      </div>
+    </div>
+
+    <a href="#" class="cta-btn">
+      <span class="cta-icon"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20"/></svg></span>
+      START WATCHING
+    </a>
+
+    <div class="hero-figures">
+      <svg viewBox="0 0 500 560" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="silo1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3a0d0d"/>
+            <stop offset="100%" stop-color="#150404"/>
+          </linearGradient>
+        </defs>
+        <!-- Generic action-pose silhouettes, entirely original shapes -->
+        <g fill="url(#silo1)" opacity="0.95">
+          <ellipse cx="250" cy="150" rx="55" ry="60"/>
+          <path d="M170 220 Q250 180 330 220 L360 560 L140 560 Z"/>
+        </g>
+        <g fill="#0f0303" opacity="0.85">
+          <ellipse cx="120" cy="230" rx="42" ry="46"/>
+          <path d="M60 290 Q120 260 180 290 L200 560 L40 560 Z"/>
+        </g>
+        <g fill="#1a0606" opacity="0.85">
+          <ellipse cx="390" cy="220" rx="42" ry="46"/>
+          <path d="M330 280 Q390 250 450 280 L470 560 L310 560 Z"/>
+        </g>
+        <path d="M180 340 L220 300 L240 340 Z" fill="var(--accent2)" opacity="0.7"/>
+      </svg>
+    </div>
+
+    <div class="search-wrap">
+      <div class="search-box">
+        <input type="text" placeholder="Search anime, movies, series...">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+    </div>
+
+    <div class="categories" id="categories"></div>
+  </div>
+
+  <!-- WATCH HISTORY -->
+  <section class="block">
+    <div class="block-head">
+      <h2>Watch History</h2>
+      <svg class="clear-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+    </div>
+    <div class="row-scroll" id="history"></div>
+  </section>
+
+  <!-- NEWEST DROPS -->
+  <section class="block">
+    <div class="block-head">
+      <h2>Newest Drops</h2>
+    </div>
+    <div class="row-scroll" id="drops"></div>
+  </section>
+
+  <!-- TRENDING -->
+  <section class="block">
+    <div class="block-head">
+      <h2>Trending Now</h2>
+    </div>
+    <div class="row-scroll" id="trending"></div>
+  </section>
+
+  <!-- TOP RATED -->
+  <section class="block">
+    <div class="block-head">
+      <h2>Top Rated</h2>
+    </div>
+    <div class="row-scroll" id="toprated"></div>
+  </section>
+
+  <!-- POPULAR MOVIES -->
+  <section class="block">
+    <div class="block-head">
+      <h2>Popular Movies</h2>
+    </div>
+    <div class="row-scroll" id="movies"></div>
+  </section>
+
+  <!-- UPCOMING -->
+  <section class="block" style="padding-bottom:24px;">
+    <div class="block-head">
+      <h2>Coming Soon</h2>
+    </div>
+    <div class="row-scroll" id="upcoming"></div>
+  </section>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M7 6V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2"/></svg>
+      MOVIES
+    </a>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      SERIES
+    </a>
+    <a class="nav-item active" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg>
+      HOME
+      <span class="dot"></span>
+    </a>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+      ANIME
+    </a>
+    <a class="nav-item" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+      CARTOON
+    </a>
+  </nav>
+
+  <script src="script.js?v=5"></script>
+
+</body>
+</html>
