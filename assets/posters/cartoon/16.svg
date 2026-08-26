@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3b1722"/><stop offset="1" stop-color="#070707"/></linearGradient></defs>
-<rect width="500" height="700" rx="28" fill="url(#g)"/>
-<circle cx="250" cy="245" r="145" fill="#ffffff10"/>
-<circle cx="250" cy="245" r="105" fill="#ffffff08"/>
-<text x="250" y="230" fill="#ffffff" font-family="Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle">Dora the Explorer</text>
-<text x="250" y="275" fill="#ff174f" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle">PRATIK ANIME STREAM</text>
-<text x="250" y="610" fill="#ffffff" font-family="Arial,sans-serif" font-size="18" text-anchor="middle">HD</text>
-</svg>
