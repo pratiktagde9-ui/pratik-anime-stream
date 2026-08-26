@@ -1,0 +1,6 @@
+{
+  "name": "Pratik Anime Stream",
+  "description": "Pratik Anime Stream (PAS) - Watch & Download Hindi Dubbed Anime, Cartoons, Marvel, and Movies with direct Google Drive links and Telegram updates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
